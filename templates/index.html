@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <style>
+        body {
+            background-image: url('/static/b1.jpg'); /* Adjust the path to your image */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 class="head">Task Master</h1>
+    {% if tasks|length < 1 %}
+    <h4 style="text-align:center" class="face">There are no tasks. Create one below </h4>
+    
+    {% else %}
+    <table class="tab">
+        <tr>
+            <th>Task</th>
+            <th>Added On</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task.content }}</td>
+            <td>{{ task.date_created.date() }}</td>
+            <td>
+                <a href="/delete/{{ task.id }}">Delete</a>
+                 <a href="/update/{{ task.id }}">Update</a>
+                <br>
+                <!-- <br> -->
+                </td>
+           
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <form action="/" method="POST" class="move">
+        <input type="text" name="content" id="content" required placeholder="Type your task..." autocomplete="off">
+        <button class="button" type="submit" value="Add Task">Add Task</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="footer">
+<hr>
+    <p>1: Ayush Patel 12240350 ayushpatel@iitbhilai.ac.in 
+    2: Mayank Patel 12241020 mayankp@iitbhilai.ac.in
+    3: Maneesh 12241380 pulidindim@iitbhilai.ac.in</p>
+  <p>  &copy; 2023 Reporiots. All rights reserved.</p>
+</div>
+
+{% endblock %}
+
+
+

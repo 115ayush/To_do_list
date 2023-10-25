@@ -1,0 +1,86 @@
+/* Add CSS for the body */
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* Center the content horizontally and vertically */
+.content {
+background-image: url('/static/b1.jpg'); /* Adjust the path to your image */
+            background-repeat: no-repeat;
+            background-size: cover;
+    text-align: center; /* Center text horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 8vh; /* Center content vertically */
+}
+
+/* Update the table structure */
+table.tab {
+    width: 100%; /* Use the full width of the container */
+    border: 1px solid black; /* Add a border to the entire table */
+}
+
+table.tab th, table.tab td {
+    border: 1px solid black; /* Border for table, th, and td */
+    padding: 8px; /* Add padding to th and td cells for spacing */
+    text-align: center; /* Center the text within cells */
+}
+
+/* Add some styles for the header row (optional) */
+table.tab th {
+    background-color: #f2f2f2; /* Gray background for header row */
+}
+
+/* Center the form horizontally */
+.move {
+    text-align: center;
+}
+
+/* Update the input field styles */
+.move input[type="text"] {
+    margin-right: 10px; /* Adjust the horizontal position */
+    padding: 5px; /* Add padding to input field */
+}
+
+/* Update the bun styles */
+.bun {
+    text-align: center; /* Center the content */
+    margin-top: 20px; /* Add space below the table */
+}
+/* Basic Button Styles */
+.button {
+    display: inline-block;
+    padding: 9px 12px;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #3498db; /* Border color */
+    color: #3498db; /* Text color */
+    background-color: #fff; /* Background color */
+    border-radius: 7px; /* Rounded corners */
+    margin: 4px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+  }
+  
+  /* Hover Effect */
+  .button:hover {
+    background-color: #3498db; /* Hover background color */
+    color: #fff; /* Hover text color */
+  }
+
+/* Update the face styles */
+.face {
+    text-align: center; /* Center the content */
+    margin-bottom: 20px; /* Add space above the table */
+}
+.footer {
+    margin-top: 700px; /* Adjust the value to specify the desired amount of space */
+    color : black;
+    font-weight : bold;
+}
+
+
